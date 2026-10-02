@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b141a" />
+    <meta name="description" content="Complete comfort across the spectrum. Air conditioning, air quality and refrigeration in Southwest Florida." />
+    <title>Full Spectrum — A different kind of comfort</title>
+  </head>
+  <body data-palette="dark" class="group bg-[#f5f8f4] font-sans text-[#f3f2e9] antialiased">
+    <a class="fixed -top-20 left-6 z-50 bg-white p-4 text-black focus:top-4" href="#climate">Skip to content</a>
+    <canvas id="atmosphere" class="pointer-events-none fixed inset-0 z-0 block size-full" aria-hidden="true"></canvas>
+    <header
+      class="fixed inset-x-0 top-0 z-40 flex h-[94px] items-center justify-between gap-6 bg-linear-to-b from-black/30 to-transparent px-[4.5%] transition-colors duration-500 group-data-[palette=light]:from-white/80 group-data-[palette=light]:text-[#203e3b] max-md:h-[78px]"
+    >
+      <a href="#climate" class="flex items-center gap-2 text-[24px] font-medium tracking-[-1.2px] max-md:text-[20px]"
+        >full spectrum<span class="mt-3 size-[6px] rounded-full bg-[#f9a066]"></span
+      ></a>
+      <span class="mr-auto ml-[4%] text-[10px] tracking-[.13em] text-white/65 group-data-[palette=light]:text-[#203e3b]/70 max-lg:hidden"
+        >AIR CONDITIONING & REFRIGERATION<br /><span class="mt-1 block text-[9px] text-white/40 group-data-[palette=light]:text-[#203e3b]/55">SOUTHWEST FLORIDA</span></span
+      >
+      <button id="explore-toggle" aria-expanded="false" aria-controls="explore-menu" class="flex items-center gap-3 text-xs max-md:text-[10px]">Explore <span>＋</span></button>
+      <a
+        href="https://book.housecallpro.com/book/Full-Spectrum-Air-Conditioning--Refrigeration/c4b75562136f4fde877ea345b3cd5507?v2=true"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="rounded-full border border-white/30 px-5 py-3 text-[11px] transition-colors group-data-[palette=light]:border-[#203e3b]/25 hover:bg-white hover:text-[#0b141a] group-data-[palette=light]:hover:bg-[#203e3b] group-data-[palette=light]:hover:text-white max-md:px-4 max-md:text-[9px]"
+        ><span class="max-md:hidden">Schedule service</span><span class="hidden max-md:inline">Service</span> <span class="ml-4 max-md:ml-2">↗</span></a
+      >
+    </header>
+    <nav
+      id="explore-menu"
+      hidden
+      class="fixed top-[85px] right-[4.5%] z-40 w-64 border border-white/15 bg-[#122028]/95 p-6 text-[#f3f2e9] backdrop-blur-xl"
+      aria-label="Explore services"
+    >
+      <a href="#climate" class="flex gap-4 border-b border-white/10 py-4 text-[13px]"><span class="text-[9px] text-white/40">01</span>Air conditioning</a>
+      <a href="#system" class="flex gap-4 border-b border-white/10 py-4 text-[13px]"><span class="text-[9px] text-white/40">02</span>System installation</a>
+      <a href="#pure" class="flex gap-4 border-b border-white/10 py-4 text-[13px]"><span class="text-[9px] text-white/40">03</span>Indoor air quality</a>
+      <a href="#glass" class="flex gap-4 border-b border-white/10 py-4 text-[13px]"><span class="text-[9px] text-white/40">04</span>Crystal clear comfort</a>
+      <a href="#flow" class="flex gap-4 border-b border-white/10 py-4 text-[13px]"><span class="text-[9px] text-white/40">05</span>Feel the airflow</a>
+      <a href="#seasons" class="flex gap-4 border-b border-white/10 py-4 text-[13px]"><span class="text-[9px] text-white/40">06</span>Comfort in every season</a>
+      <a href="#diagnostic" class="flex gap-4 py-4 text-[13px]"><span class="text-[9px] text-white/40">07</span>AC not cooling?</a>
+    </nav>
+    <button
+      id="motion-toggle"
+      class="fixed right-6 bottom-6 z-30 flex size-9 items-center justify-center rounded-full border border-white/25 bg-black/15 text-xs text-white/65 backdrop-blur-md group-data-[palette=light]:border-[#203e3b]/25 group-data-[palette=light]:bg-white/50 group-data-[palette=light]:text-[#203e3b]/70 max-md:right-4 max-md:bottom-4"
+      aria-label="Pause ambient motion"
+      aria-pressed="false"
+    >
+      Ⅱ
+    </button>
+    <main>
+      <section id="climate" data-scene="0" class="relative z-10 h-[280vh] max-md:h-[240vh]">
+        <div class="sticky top-0 flex h-svh min-h-[650px] items-center overflow-hidden px-[7%] max-md:min-h-[600px] max-md:px-[7%]">
+          <div data-copy class="relative z-10 mt-10 max-w-[650px] max-md:-mt-[180px]">
+            <p class="mb-7 text-[11px] tracking-[.24em] text-white/60 uppercase max-md:mb-5 max-md:text-[9px]">YOUR WORLD. YOUR CLIMATE.</p>
+            <h1 id="climate-headline" class="text-[clamp(65px,7.5vw,132px)] leading-[.96] font-normal tracking-[-.065em] max-md:text-[64px]">
+              Florida outside.<br /><span class="font-serif text-[.92em] font-light tracking-[-.06em] text-[#f7c9a3] italic">Your calm inside.</span>
+            </h1>
+            <p class="mt-7 max-w-[350px] text-[16px] leading-[1.6] font-light text-white/70 max-md:mt-5 max-md:max-w-[270px] max-md:text-sm">
+              The heat belongs outside. Let us take care of the air you come home to.
+            </p>
+            <a
+              class="mt-9 inline-flex items-center gap-8 border-b border-white/40 pb-3 text-[13px] transition-colors hover:border-white hover:text-white max-md:mt-7"
+              href="https://book.housecallpro.com/book/Full-Spectrum-Air-Conditioning--Refrigeration/c4b75562136f4fde877ea345b3cd5507?v2=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Find your comfort <span>↗</span></a
+            >
+          </div>
+          <div class="absolute top-[53%] right-[10%] -translate-y-1/2 text-center max-md:top-[73%] max-md:right-[9%]">
+            <div class="flex items-start">
+              <span id="room-temp" class="text-[clamp(130px,16vw,260px)] leading-none font-extralight tracking-[-.085em] tabular-nums max-md:text-[120px]">108</span
+              ><span class="mt-4 ml-4 text-[30px] font-light max-md:mt-3 max-md:text-xl">°F</span>
+            </div>
+            <p id="room-state" class="mt-4 text-[10px] tracking-[.26em] text-white/70 uppercase max-md:text-[8px]">FLORIDA HEAT</p>
+          </div>
+          <div class="absolute inset-x-[7%] bottom-8 flex items-center justify-between gap-4 text-[10px] tracking-[.12em] text-white/50 max-md:bottom-6 max-md:text-[8px]">
+            <span>01 / AIR CONDITIONING</span><span id="climate-hint">SCROLL. FEEL THE DIFFERENCE. ↓</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="system" data-scene="1" class="relative z-10 h-[190vh] text-[#203e3b] max-md:h-[165vh]">
+        <div class="sticky top-0 flex h-svh min-h-[650px] items-center overflow-hidden px-[7%] max-md:min-h-[600px] max-md:px-[7%]">
+          <div data-copy class="relative z-10 max-w-[620px] max-md:-mt-[230px] portrait:-mt-[300px]">
+            <p class="mb-7 text-[11px] tracking-[.24em] text-[#46625e]/70 uppercase max-md:mb-5 max-md:text-[9px]">BEAUTIFULLY ENGINEERED COMFORT.</p>
+            <h2 class="text-[clamp(65px,7.5vw,132px)] leading-[.96] font-normal tracking-[-.065em] max-md:text-[64px]">
+              Every detail.<br /><span class="font-serif text-[.92em] text-[#386d67] italic">Working for you.</span>
+            </h2>
+            <p class="mt-7 max-w-[350px] text-[16px] leading-[1.6] font-light text-[#46625e] max-md:mt-5 max-md:max-w-[270px] max-md:text-sm">
+              The right system, installed with care. Discover what goes into a better feeling home.
+            </p>
+            <a
+              class="mt-9 inline-flex items-center gap-8 border-b border-[#46625e]/40 pb-3 text-[13px] transition-colors hover:border-[#203e3b] hover:text-[#203e3b] max-md:mt-7"
+              href="https://fullspectrumac.com/air-conditioning/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Explore system installation <span>↗</span></a
+            >
+          </div>
+          <div
+            class="absolute inset-x-[7%] bottom-8 flex items-center justify-between gap-4 text-[10px] tracking-[.12em] text-[#46625e]/75 max-md:bottom-6 max-md:pr-9 max-md:text-[8px]"
+          >
+            <span>02 / SYSTEM INSTALLATION</span><span id="system-hint">SCROLL TO LOOK INSIDE ↓</span>
+          </div>
+        </div>
+      </section>
+      <section id="pure" data-scene="2" class="relative z-10 h-[175vh]! h-[190vh] text-[#203e3b] max-md:h-[165vh]">
+        <div
+          class="sticky top-0 flex h-svh min-h-[650px] items-center items-start! justify-center! overflow-hidden px-[7%] pt-[16vh] max-md:min-h-[600px] max-md:px-[7%] max-md:pt-[18vh]"
+        >
+          <div data-copy class="relative z-10 text-center">
+            <p class="mb-7 text-[11px] tracking-[.24em] text-[#46625e]/70 uppercase max-md:mb-5 max-md:text-[9px]">A FRESHER PERSPECTIVE.</p>
+            <h2 class="text-[clamp(65px,7.5vw,132px)] leading-[.96] font-normal tracking-[-.065em] max-md:text-[64px]">
+              Make room<br />for <span class="font-serif text-[#358c7c] italic">better air.</span>
+            </h2>
+            <p class="mx-auto mt-7 max-w-[350px] max-w-[480px]! text-[16px] leading-[1.6] font-light text-[#46625e] max-md:mt-5 max-md:max-w-[270px] max-md:text-sm">
+              Advanced filtration and purification. A whole-home approach to the air you breathe.
+            </p>
+            <a
+              class="mt-9 inline-flex items-center gap-8 border-b border-[#46625e]/40 pb-3 text-[13px] transition-colors hover:border-[#203e3b] hover:text-[#203e3b] max-md:mt-7"
+              href="https://fullspectrumac.com/more-services/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Discover indoor air quality <span>↗</span></a
+            >
+          </div>
+          <div
+            class="absolute bottom-[15%] left-[10%] rounded-full bg-white/75 px-3 py-1 text-[11px] tracking-[.2em] text-[#9b7152] max-md:bottom-[18%] max-md:left-[5%] max-md:text-[9px]"
+          >
+            AIR IN
+          </div>
+          <div
+            class="absolute right-[10%] bottom-[15%] rounded-full bg-white/75 px-3 py-1 text-[11px] tracking-[.2em] text-[#318a7b] max-md:right-[5%] max-md:bottom-[18%] max-md:text-[9px]"
+          >
+            FRESH PERSPECTIVE
+          </div>
+          <div
+            class="absolute inset-x-[7%] bottom-8 flex items-center justify-between gap-4 text-[10px] tracking-[.12em] text-[#46625e]/75 max-md:bottom-6 max-md:pr-9 max-md:text-[8px]"
+          >
+            <span>03 / INDOOR AIR QUALITY</span><span>FOLLOW THE AIR ↓</span>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="glass" data-scene="3" class="relative z-10 h-[185vh] text-[#203e3b] max-md:h-[165vh]">
+        <div class="sticky top-0 flex h-svh min-h-[650px] items-center overflow-hidden px-[7%] max-md:min-h-[740px]">
+          <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+            <img id="glass-room" src="/images/florida-interior.jpg" alt="" class="absolute inset-0 size-full object-cover brightness-[.78]" />
+            <div class="absolute inset-0 bg-linear-to-r from-[#f6f9f3] from-30% via-[#f6f9f3]/85 via-45% to-transparent to-68% max-md:bg-linear-to-b max-md:from-20% max-md:via-38% max-md:to-65% md:portrait:bg-linear-to-b md:portrait:from-20% md:portrait:via-38% md:portrait:to-65%"></div>
+            <div class="absolute inset-x-0 top-0 h-36 bg-linear-to-b from-[#f6f9f3] via-[#f6f9f3]/70 to-transparent"></div>
+            <svg id="glass-light" viewBox="0 0 800 800" preserveAspectRatio="none" class="absolute top-0 right-0 h-full w-[56%] opacity-25 max-md:top-[35%] max-md:h-[65%] max-md:w-full md:portrait:top-[35%] md:portrait:h-[65%] md:portrait:w-full"><g fill="none" stroke="#e3fff3" stroke-width="1.5"><path d="M180 -100 C700 200 -150 430 750 650"/><path d="M220 -100 C740 200 -110 430 790 650"/><path d="M260 -100 C780 200 -70 430 830 650"/><path d="M300 -100 C820 200 -30 430 870 650"/></g></svg>
+          </div>
+          <div data-copy class="relative z-10 max-w-[46%] max-md:absolute max-md:top-[12%] max-md:mt-0 max-md:max-w-full md:portrait:-mt-[450px] md:portrait:max-w-full">
+            <p class="mb-7 text-[11px] tracking-[.24em] text-[#46625e]/70 max-md:mb-4 max-md:text-[9px]">A CLEARER WAY TO COMFORT.</p>
+            <h2 class="text-[clamp(65px,7.5vw,132px)] leading-[.96] tracking-[-.065em] max-md:text-[54px]">Your comfort.<br /><span class="font-serif text-[.92em] text-[#386d67] italic">Crystal clear.</span></h2>
+            <p class="mt-7 max-w-[340px] text-[16px] leading-[1.6] font-light text-[#46625e] max-md:mt-4 max-md:max-w-[280px] max-md:text-sm">A space that feels just right. Move into your perfect balance of cool and calm.</p>
+            <a href="https://fullspectrumac.com/air-conditioning/" target="_blank" rel="noopener noreferrer" class="mt-9 inline-flex items-center gap-8 border-b border-[#46625e]/40 pb-3 text-[13px] max-md:mt-5">Find your comfort <span>↗</span></a>
+          </div>
+          <div id="glass-controls" class="absolute top-[29%] right-[5%] w-[43%] text-[#f8fffb] [text-shadow:0_1px_8px_#061e1acc] max-md:top-[48%] max-md:right-[7%] max-md:bottom-auto max-md:w-[86%] md:portrait:top-auto md:portrait:right-[17%] md:portrait:bottom-[16%] md:portrait:w-[66%]">
+            <div class="mb-6 flex justify-center max-md:mb-3 gap-2 text-[10px] tracking-[.2em] text-white/85"><span class="size-1.5 self-center rounded-full bg-[#b8ffde]"></span>YOUR HOME. IN BALANCE.</div>
+            <div class="relative flex h-[224px] items-center justify-center max-md:h-[168px]">
+              <div id="thermostat" class="absolute h-[210px] w-[360px] max-w-[88%] cursor-grab rounded-[999px] select-none active:cursor-grabbing border border-white/50 text-white shadow-[0_24px_60px_-20px_#071e2555] max-md:h-[160px] max-md:w-[280px]">
+                <div data-glass-surface class="pointer-events-none absolute inset-0 rounded-[inherit] bg-black/5 shadow-[inset_0_0_2px_1px_#ffffff99,inset_0_0_14px_4px_#ffffff33,inset_0_6px_32px_#122e291a] [backdrop-filter:url(#climate-glass)_saturate(1.35)]"></div>
+                <div id="glass-sheen" class="pointer-events-none absolute inset-0 rounded-[inherit] bg-[radial-gradient(ellipse_at_25%_10%,#ffffff55,transparent_55%)]"></div>
+                <div class="pointer-events-none relative flex h-full flex-col items-center justify-center"><div><span id="setpoint" aria-live="polite" class="text-[104px] leading-none font-extralight tracking-[-.08em] tabular-nums max-md:text-[80px]">72</span><span class="ml-2 align-top text-xl">°F</span></div><p id="glass-state" class="mt-4 text-[9px] tracking-[.22em] text-white/85">YOUR KIND OF COMFORT</p></div>
+              </div>
+            </div>
+            <div class="relative mx-auto mt-8 w-[82%] max-md:mt-4">
+              <label for="comfort-range" class="mb-3 block text-center max-md:mb-2 text-[10px] tracking-[.16em] text-white/75">SLIDE INTO YOUR COMFORT</label>
+              <input id="comfort-range" type="range" min="68" max="78" step="1" value="72" aria-label="Comfort temperature" class="block h-8 w-full cursor-ew-resize appearance-none bg-transparent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white [&::-webkit-slider-runnable-track]:h-[2px] [&::-webkit-slider-runnable-track]:rounded-full [&::-webkit-slider-runnable-track]:bg-white/65 [&::-webkit-slider-thumb]:-mt-[8px] [&::-webkit-slider-thumb]:size-[18px] [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border [&::-webkit-slider-thumb]:border-white/90 [&::-webkit-slider-thumb]:bg-white/40 [&::-webkit-slider-thumb]:shadow-[0_0_14px_#c6fff566] [&::-moz-range-track]:h-[2px] [&::-moz-range-track]:bg-white/40 [&::-moz-range-thumb]:size-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-white [&::-moz-range-thumb]:bg-white/60" />
+              <div class="flex justify-between text-[10px] tracking-[.1em] text-white/70"><span>68° · COOL</span><span>78° · COZY</span></div>
+            </div>
+            <div class="mx-auto mt-6 flex w-[82%] max-md:mt-3 items-center justify-between"><button id="temp-down" aria-label="Lower temperature" class="flex size-10 items-center justify-center rounded-full border border-white/35 bg-white/5 text-xl disabled:opacity-30 hover:bg-white/15">−</button><span class="text-xs text-white/80">Comfort, in your hands.</span><button id="temp-up" aria-label="Raise temperature" class="flex size-10 items-center justify-center rounded-full border border-white/35 bg-white/5 text-xl disabled:opacity-30 hover:bg-white/15">＋</button></div>
+          </div>
+          <div class="absolute inset-x-[7%] bottom-8 flex justify-between gap-4 text-[10px] tracking-[.12em] text-[#46625e]/75 max-md:pr-9 max-md:text-[8px]"><span>04 / CLIMATE CONTROL</span><span class="text-white/70">A LITTLE SHIFT. A BETTER FEELING.</span></div>
+        </div>
+      </section>
+      <section id="flow" data-scene="4" class="relative z-10 h-[170vh] text-[#203e3b] max-md:h-[150vh]">
+        <div class="sticky top-0 flex h-svh min-h-[650px] items-center overflow-hidden px-[7%] max-md:min-h-[700px]">
+          <canvas id="flow-air" class="pointer-events-none absolute inset-0 size-full" aria-hidden="true"></canvas>
+          <div data-copy class="relative z-10 max-w-[620px] max-md:-mt-[300px] md:portrait:-mt-[380px]">
+            <p class="mb-7 text-[11px] tracking-[.24em] text-[#46625e]/70 max-md:mb-4 max-md:text-[9px]">QUIETLY POWERFUL.</p>
+            <h2 class="text-[clamp(65px,7.5vw,132px)] leading-[.96] tracking-[-.065em] max-md:text-[58px]">Comfort you<br /><span class="font-serif text-[#358c7c] italic">can feel.</span></h2>
+            <p class="mt-7 max-w-[340px] text-[16px] leading-[1.6] font-light text-[#46625e] max-md:mt-5 max-md:max-w-[275px] max-md:text-sm">Balanced airflow. A gentler atmosphere. Discover the feeling of a system working in harmony.</p>
+            <a href="https://fullspectrumac.com/air-conditioning/" target="_blank" rel="noopener noreferrer" class="mt-9 inline-flex items-center gap-8 border-b border-[#46625e]/40 pb-3 text-[13px] max-md:mt-6">Explore air conditioning <span>↗</span></a>
+          </div>
+          <div class="pointer-events-none absolute bottom-[15%] right-[15%] flex flex-col items-center max-md:bottom-[12%] max-md:right-[25%]">
+            <div class="flex h-5 w-40 items-center justify-center gap-1 rounded-full border border-[#76aaa1]/30 bg-white/70 px-4 shadow-[0_8px_30px_#6b9e9222]" aria-hidden="true"><span class="h-px w-full bg-[repeating-linear-gradient(90deg,#5f9f91_0px,#5f9f91_3px,transparent_3px,transparent_7px)]"></span></div>
+            <span class="mt-4 text-[9px] tracking-[.18em] text-[#44796d]">MOVE TO SHAPE THE AIR</span>
+          </div>
+          <div class="absolute inset-x-[7%] bottom-8 flex justify-between gap-4 text-[10px] tracking-[.12em] text-[#46625e]/75 max-md:pr-9 max-md:text-[8px]"><span>05 / BALANCED AIRFLOW</span><span>A LITTLE LESS EFFORT. MORE COMFORT.</span></div>
+        </div>
+      </section>
+      <section id="seasons" data-scene="5" data-mode="cool" class="group/season relative z-10 h-[180vh] text-[#263f3b] max-md:h-[160vh]">
+        <div class="sticky top-0 h-svh min-h-[700px] overflow-hidden bg-[#f1f2eb] max-md:min-h-[780px]">
+          <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_78%_44%,#e2eeea,transparent_62%)] transition-colors duration-[2000ms] group-data-[mode=heat]/season:bg-[#f3e9db]/60"></div>
+          <canvas id="season-room" class="absolute inset-0 size-full max-md:top-[30%] max-md:h-[53%] md:portrait:top-[30%] md:portrait:h-[53%]" aria-label="Illustrative 3D room showing cooling airflow near the ceiling and heating airflow along the floor" role="img"></canvas>
+          <div data-copy class="pointer-events-none absolute top-[23%] left-[7%] z-10 w-[34%] max-md:top-[13%] max-md:w-[86%] md:portrait:top-[13%] md:portrait:w-[86%]">
+            <p class="mb-7 text-[10px] tracking-[.23em] text-[#677975] max-md:mb-4 max-md:text-[9px]">THE ART OF FEELING AT HOME.</p>
+            <h2 class="text-[clamp(60px,5.7vw,104px)] leading-[.96] tracking-[-.065em] max-md:text-[54px]">One space.<br /><span class="font-serif text-[#477f77] italic transition-colors duration-1000 group-data-[mode=heat]/season:text-[#a3714f]">Every season.</span></h2>
+            <p class="mt-7 max-w-[290px] text-[15px] leading-relaxed font-light text-[#61736c] max-md:mt-4 max-md:max-w-[300px] max-md:text-[13px]">Comfort goes beyond temperature.<br />It’s how the air moves around you.</p>
+            <a href="https://fullspectrumac.com/air-conditioning/" target="_blank" rel="noopener noreferrer" class="pointer-events-auto mt-8 inline-flex gap-8 border-b border-[#758b80]/45 pb-3 text-xs max-md:hidden md:portrait:hidden">Discover complete comfort <span>↗</span></a>
+          </div>
+          <div class="pointer-events-none absolute top-[20%] right-[7%] z-10 text-right max-md:top-[38%] md:portrait:top-[38%]">
+            <p class="text-[9px] tracking-[.22em] text-[#758a80]">YOUR PERFECT ATMOSPHERE</p>
+            <p class="mt-2 text-[72px] leading-none font-extralight tracking-[-.07em] text-[#477f77] transition-colors duration-1000 group-data-[mode=heat]/season:text-[#a3714f] max-md:text-[44px]"><span id="season-temp">68</span><span class="ml-1 align-top text-lg">°F</span></p>
+          </div>
+          <div class="absolute bottom-[9%] left-[61%] z-10 flex w-[min(520px,40%)] -translate-x-1/2 flex-col items-center max-md:bottom-[8%] max-md:left-1/2 max-md:w-[86%] md:portrait:bottom-[8%] md:portrait:left-1/2 md:portrait:w-[86%]">
+            <div role="group" aria-label="Choose cooling or heating" class="relative grid w-[340px] max-w-full grid-cols-2 rounded-full border border-[#7f9c91]/20 bg-white/45 p-1.5 shadow-[0_8px_35px_#6f8c8014] backdrop-blur-xl">
+              <span id="season-switch" class="pointer-events-none absolute top-1.5 bottom-1.5 left-1.5 w-[calc(50%-6px)] rounded-full bg-white shadow-[0_3px_12px_#526f6622] transition-transform duration-700 ease-in-out group-data-[mode=heat]/season:translate-x-full"></span>
+              <button id="season-cool" aria-pressed="true" class="relative flex items-center justify-center gap-3 rounded-full px-4 py-4 text-xs tracking-[.06em] text-[#477f77] focus-visible:outline-2 focus-visible:outline-[#477f77] max-md:py-3"><svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M12 2v20M3.34 7l17.32 10M3.34 17 20.66 7M9 4l3 3 3-3M9 20l3-3 3 3M3.6 10.6l4.1-1.1-1.1-4.1M17.4 18.6l-1.1-4.1 4.1-1.1M6.6 18.6l1.1-4.1-4.1-1.1M20.4 10.6l-4.1-1.1 1.1-4.1"/></svg>COOL <span class="text-[#82958d]">68°F</span></button>
+              <button id="season-heat" aria-pressed="false" class="relative flex items-center justify-center gap-3 rounded-full px-4 py-4 text-xs tracking-[.06em] text-[#a3714f] focus-visible:outline-2 focus-visible:outline-[#a3714f] max-md:py-3"><svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 1v3m0 16v3M1 12h3m16 0h3M4.2 4.2l2.1 2.1m11.4 11.4 2.1 2.1M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>HEAT <span class="text-[#a89a88]">74°F</span></button>
+            </div>
+            <p id="season-description" aria-live="polite" class="mt-5 min-h-10 max-w-[370px] text-center text-[12px] leading-relaxed text-[#687d73] max-md:mt-3 max-md:text-[11px]">A cool current sweeps the ceiling.<br />Then settles gently through your space.</p>
+          </div>
+          <div class="pointer-events-none absolute inset-x-[7%] bottom-7 flex justify-between gap-5 text-[9px] tracking-[.12em] text-[#84988d] max-md:pr-8 max-md:text-[7px]"><span>06 / COMFORT IN EVERY SEASON</span><span id="season-detail">COOL AIR. A SOFTER LANDING.</span></div>
+        </div>
+      </section>
+      <section id="diagnostic" data-scene="6" class="relative z-10 h-[190vh] text-[#263f3b] max-md:h-auto md:portrait:h-auto">
+        <div class="sticky top-0 h-svh min-h-[700px] overflow-hidden bg-[#f6f7f1] max-md:relative max-md:h-auto max-md:min-h-0 max-md:overflow-visible max-md:pb-20 md:portrait:relative md:portrait:h-auto md:portrait:min-h-0 md:portrait:overflow-visible md:portrait:pb-20">
+          <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_76%_38%,#dcebe4,transparent_55%)]"></div>
+          <div data-copy class="relative z-10 w-[34%] pt-[16vh] pl-[7%] max-md:w-full max-md:px-[7%] max-md:pt-24 md:portrait:w-full md:portrait:px-[7%] md:portrait:pt-28">
+            <p class="mb-5 text-[10px] tracking-[.23em] text-[#80968a] max-md:mb-4 max-md:text-[9px]">SOMETHING FEELS OFF?</p>
+            <h2 class="text-[clamp(58px,5.5vw,94px)] leading-[.96] tracking-[-.065em] max-md:text-[58px]">AC not<br /><span class="font-serif text-[#487d70] italic">cooling?</span></h2>
+            <p class="mt-5 text-[14px] leading-relaxed text-[#7a8e81] max-md:text-[13px]">Tell us what you're noticing.<br />We'll take it from here.</p>
+            <div role="group" aria-label="Choose an AC symptom" class="-ml-4 mt-7 space-y-1 max-md:ml-0 max-md:mt-6 max-md:grid max-md:grid-cols-2 max-md:gap-1 max-md:space-y-0 md:portrait:ml-0">
+              <button type="button" data-symptom="warm" data-active="true" aria-pressed="true" class="group/issue flex w-full items-center gap-4 rounded-xl border border-transparent px-4 py-3 text-left text-[14px] text-[#647c74] transition-colors duration-300 hover:text-[#274e47] data-[active=true]:border-[#bcd1c4]/60 data-[active=true]:bg-[#e6eee6] data-[active=true]:text-[#274e47] focus-visible:outline-2 focus-visible:outline-[#527f73] max-md:min-h-[58px] max-md:gap-2 max-md:px-3 max-md:py-2 max-md:text-[12px]"><span class="w-4 text-[9px] tabular-nums text-[#9eafa4] max-md:hidden">01</span><span>AC blowing warm air</span><span class="ml-auto text-[#6d9387] opacity-0 transition-opacity group-data-[active=true]/issue:opacity-100 max-md:hidden" aria-hidden="true">↗</span></button>
+              <button type="button" data-symptom="leak" data-active="false" aria-pressed="false" class="group/issue flex w-full items-center gap-4 rounded-xl border border-transparent px-4 py-3 text-left text-[14px] text-[#647c74] transition-colors duration-300 hover:text-[#274e47] data-[active=true]:border-[#bcd1c4]/60 data-[active=true]:bg-[#e6eee6] data-[active=true]:text-[#274e47] focus-visible:outline-2 focus-visible:outline-[#527f73] max-md:min-h-[58px] max-md:gap-2 max-md:px-3 max-md:py-2 max-md:text-[12px]"><span class="w-4 text-[9px] tabular-nums text-[#9eafa4] max-md:hidden">02</span><span>Water leaks</span><span class="ml-auto text-[#6d9387] opacity-0 transition-opacity group-data-[active=true]/issue:opacity-100 max-md:hidden" aria-hidden="true">↗</span></button>
+              <button type="button" data-symptom="power" data-active="false" aria-pressed="false" class="group/issue flex w-full items-center gap-4 rounded-xl border border-transparent px-4 py-3 text-left text-[14px] text-[#647c74] transition-colors duration-300 hover:text-[#274e47] data-[active=true]:border-[#bcd1c4]/60 data-[active=true]:bg-[#e6eee6] data-[active=true]:text-[#274e47] focus-visible:outline-2 focus-visible:outline-[#527f73] max-md:min-h-[58px] max-md:gap-2 max-md:px-3 max-md:py-2 max-md:text-[12px]"><span class="w-4 text-[9px] tabular-nums text-[#9eafa4] max-md:hidden">03</span><span>Unit not turning on</span><span class="ml-auto text-[#6d9387] opacity-0 transition-opacity group-data-[active=true]/issue:opacity-100 max-md:hidden" aria-hidden="true">↗</span></button>
+              <button type="button" data-symptom="noise" data-active="false" aria-pressed="false" class="group/issue flex w-full items-center gap-4 rounded-xl border border-transparent px-4 py-3 text-left text-[14px] text-[#647c74] transition-colors duration-300 hover:text-[#274e47] data-[active=true]:border-[#bcd1c4]/60 data-[active=true]:bg-[#e6eee6] data-[active=true]:text-[#274e47] focus-visible:outline-2 focus-visible:outline-[#527f73] max-md:min-h-[58px] max-md:gap-2 max-md:px-3 max-md:py-2 max-md:text-[12px]"><span class="w-4 text-[9px] tabular-nums text-[#9eafa4] max-md:hidden">04</span><span>Unusual noises</span><span class="ml-auto text-[#6d9387] opacity-0 transition-opacity group-data-[active=true]/issue:opacity-100 max-md:hidden" aria-hidden="true">↗</span></button>
+              <button type="button" data-symptom="thermostat" data-active="false" aria-pressed="false" class="group/issue flex w-full items-center gap-4 rounded-xl border border-transparent px-4 py-3 text-left text-[14px] text-[#647c74] transition-colors duration-300 hover:text-[#274e47] data-[active=true]:border-[#bcd1c4]/60 data-[active=true]:bg-[#e6eee6] data-[active=true]:text-[#274e47] focus-visible:outline-2 focus-visible:outline-[#527f73] max-md:min-h-[58px] max-md:gap-2 max-md:px-3 max-md:py-2 max-md:text-[12px]"><span class="w-4 text-[9px] tabular-nums text-[#9eafa4] max-md:hidden">05</span><span>Thermostat problems</span><span class="ml-auto text-[#6d9387] opacity-0 transition-opacity group-data-[active=true]/issue:opacity-100 max-md:hidden" aria-hidden="true">↗</span></button>
+              <button type="button" data-symptom="weak" data-active="false" aria-pressed="false" class="group/issue flex w-full items-center gap-4 rounded-xl border border-transparent px-4 py-3 text-left text-[14px] text-[#647c74] transition-colors duration-300 hover:text-[#274e47] data-[active=true]:border-[#bcd1c4]/60 data-[active=true]:bg-[#e6eee6] data-[active=true]:text-[#274e47] focus-visible:outline-2 focus-visible:outline-[#527f73] max-md:min-h-[58px] max-md:gap-2 max-md:px-3 max-md:py-2 max-md:text-[12px]"><span class="w-4 text-[9px] tabular-nums text-[#9eafa4] max-md:hidden">06</span><span>Weak airflow</span><span class="ml-auto text-[#6d9387] opacity-0 transition-opacity group-data-[active=true]/issue:opacity-100 max-md:hidden" aria-hidden="true">↗</span></button>
+            </div>
+          </div>
+          <div id="diagnostic-stage" class="absolute top-[16%] right-[3%] h-[57%] w-[59%] max-md:relative max-md:top-auto max-md:right-auto max-md:mt-1 max-md:h-[300px] max-md:w-full md:portrait:relative md:portrait:top-auto md:portrait:right-auto md:portrait:mt-2 md:portrait:h-[420px] md:portrait:w-full">
+            <canvas id="diagnostic-system" class="absolute inset-0 size-full" aria-label="Illustrative cutaway AC system highlighting the component associated with the selected symptom" role="img"></canvas>
+            <svg class="pointer-events-none absolute inset-0 size-full" aria-hidden="true"><path id="diagnostic-leader" fill="none" stroke="#aa967a" stroke-width="1" opacity=".6"/><circle id="diagnostic-spot" r="3" fill="#b28b61" stroke="#f6f7f1" stroke-width="1.5"/></svg>
+            <span id="diagnostic-zone" class="pointer-events-none absolute left-[61%] top-[15%] rounded-full border border-[#a4beb0]/40 bg-[#f8faf4]/85 px-4 py-2 text-[9px] tracking-[.12em] text-[#4e7b6b] shadow-[0_4px_18px_#56796b0f] backdrop-blur-md">COOLING CIRCUIT</span>
+            <div id="diagnostic-thermostat" class="pointer-events-none absolute bottom-[13%] left-[10%] flex h-20 w-[74px] flex-col items-center justify-center rounded-2xl border border-[#b4c8ba]/60 bg-[#f9fcf6]/90 text-[#608c7b] shadow-[0_12px_28px_#79988422] backdrop-blur-md max-md:left-[7%] max-md:h-[66px] max-md:w-[62px]">
+              <span class="text-[7px] tracking-[.1em]">SET POINT</span><span id="diagnostic-reading" class="mt-1 text-[28px] leading-none font-light tracking-[-.06em] tabular-nums max-md:text-[24px]">72°</span><span id="diagnostic-readout" class="mt-1 text-[6px] tracking-[.12em]">COOL</span>
+            </div>
+          </div>
+          <div id="diagnostic-explanation" class="absolute bottom-[10%] left-[44%] z-10 w-[46%] max-w-[540px] border-t border-[#c2d2c3] pt-5 max-md:relative max-md:bottom-auto max-md:left-auto max-md:mx-[7%] max-md:mt-0 max-md:w-auto md:portrait:relative md:portrait:bottom-auto md:portrait:left-auto md:portrait:mx-[7%] md:portrait:mt-0 md:portrait:w-auto">
+            <div class="flex items-center gap-2 text-[9px] tracking-[.16em] text-[#8a9e90]"><span class="size-1.5 rounded-full bg-[#b28b61]"></span><span id="diagnostic-category">LET'S CHECK THE COOLING</span></div>
+            <h3 id="diagnostic-title" class="mt-3 text-[24px] leading-tight tracking-[-.035em] text-[#315c50] max-md:text-[25px]">Running, but not feeling cooler?</h3>
+            <p id="diagnostic-description" class="mt-2 max-w-[450px] text-[13px] leading-relaxed font-light text-[#728678]">Airflow alone doesn't mean the system is cooling. A technician can check the cooling circuit, controls and airflow to find the cause.</p>
+            <a id="diagnostic-booking" href="https://book.housecallpro.com/book/Full-Spectrum-Air-Conditioning--Refrigeration/c4b75562136f4fde877ea345b3cd5507?v2=true" target="_blank" rel="noopener noreferrer" class="mt-5 inline-flex items-center gap-8 border-b border-[#709681]/50 pb-2 text-[12px] text-[#315c50]">Request service <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="pointer-events-none absolute inset-x-[7%] bottom-7 flex justify-between gap-5 text-[9px] tracking-[.12em] text-[#93a598] max-md:text-[7px]"><span>07 / LET'S GET YOUR COMFORT BACK</span><span>SELECT A SYMPTOM TO EXPLORE</span></div>
+        </div>
+      </section>
+    </main>
+    <footer class="relative z-20 flex min-h-[380px] flex-col justify-center bg-[#ecefe6] px-[7%] py-20 text-[#19271f]">
+      <p class="text-[11px] tracking-[.18em] text-[#6b7b6b]">COMPLETE COMFORT ACROSS THE SPECTRUM.</p>
+      <div class="mt-8 flex items-end justify-between gap-10 max-md:flex-col max-md:items-start">
+        <h2 class="text-[clamp(46px,6vw,90px)] leading-none tracking-[-.06em]">Let’s make<br />your place feel <em class="font-serif text-[#788f7c]">better.</em></h2>
+        <a href="tel:2398442665" class="border-b border-[#72856e] pb-3 text-xl">239-844-COOL ↗</a>
+      </div>
+      <p class="mt-16 border-t border-[#cdd6c7] pt-5 text-[10px] text-[#657462]">
+        Seven independent motion concepts shown in a service website context. Illustrative 3D system and generated interior photography. Temperature values
+        illustrate the transition.
+      </p>
+    </footer>
+    <svg width="0" height="0" class="absolute" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs><filter id="climate-glass" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB"><feImage id="glass-map" width="100%" height="100%" preserveAspectRatio="none" result="lens"/><feDisplacementMap in="SourceGraphic" in2="lens" scale="-44" xChannelSelector="R" yChannelSelector="G" result="red-shift"/><feColorMatrix in="red-shift" type="matrix" values="1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0" result="red"/><feDisplacementMap in="SourceGraphic" in2="lens" scale="-45" xChannelSelector="R" yChannelSelector="G" result="green-shift"/><feColorMatrix in="green-shift" type="matrix" values="0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0" result="green"/><feDisplacementMap in="SourceGraphic" in2="lens" scale="-46" xChannelSelector="R" yChannelSelector="G" result="blue-shift"/><feColorMatrix in="blue-shift" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0" result="blue"/><feBlend in="red" in2="green" mode="screen" result="rg"/><feBlend in="rg" in2="blue" mode="screen"/></filter></defs></svg>
+    <script type="module" src="/src/scripts/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Project entry page." />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href="/images/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png" />
+    <title>Project Ready</title>
+
+    <style>
+      :root {
+        color-scheme: light;
+        --page-bg: #f8fbff;
+        --text: #101828;
+        --muted: #66768a;
+        --accent: #1685d9;
+        --accent-hover: #0e6fb8;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        min-height: 100%;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        font-family: "SF Mono", "Cascadia Code", "JetBrains Mono", "Fira Code", ui-monospace, system-ui, monospace;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 15% 20%, rgb(57 169 255 / 0.22), transparent 26rem), radial-gradient(circle at 85% 15%, rgb(165 213 255 / 0.34), transparent 28rem),
+          linear-gradient(120deg, #ffffff, var(--page-bg), #eef8ff, #ffffff);
+        background-size: 140% 140%;
+        animation: page-shift 14s ease-in-out infinite alternate;
+        line-height: 1.5;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .page {
+        display: grid;
+        min-height: 100vh;
+        place-items: center;
+        padding: 24px;
+      }
+
+      .intro {
+        width: min(100%, 560px);
+        padding: 0;
+        text-align: center;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(36px, 7vw, 72px);
+        font-weight: 650;
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+
+      .actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 28px;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        padding: 0 24px;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        transition:
+          background-color 160ms ease,
+          color 160ms ease,
+          transform 160ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-1px);
+      }
+
+      .button:focus-visible {
+        outline: 3px solid rgb(22 133 217 / 0.25);
+        outline-offset: 3px;
+      }
+
+      .button-primary {
+        background: var(--accent);
+        color: #ffffff;
+      }
+
+      .button-primary:hover {
+        background: var(--accent-hover);
+      }
+
+      @keyframes page-shift {
+        from {
+          background-position: 0% 50%;
+        }
+
+        to {
+          background-position: 100% 50%;
+        }
+      }
+
+      @media (max-width: 540px) {
+        .page {
+          align-items: stretch;
+          padding: 16px;
+        }
+
+        .actions {
+          display: block;
+        }
+
+        .button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="intro" aria-labelledby="page-title">
+        <h1 id="page-title">Your project is ready.</h1>
+
+        <div class="actions">
+          <a class="button button-primary" href="/pages/index.html">Start development</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

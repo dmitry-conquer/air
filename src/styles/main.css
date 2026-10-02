@@ -1,0 +1,8 @@
+@import "tailwindcss" source(none);
+@source "../../pages/**/*.html";
+@source "../../components/**/*.html";
+@theme {
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@source "../scripts/comfort-scenes.ts";
